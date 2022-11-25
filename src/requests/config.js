@@ -1,7 +1,7 @@
 const Config = {
-  BASE_URL: '',
+  BASE_URL:'https://www.googleapis.com/',
   //End Points
-  getSearchData: '/data/',
+  getSearchData: 'youtube/v3/search',
 };
 
 export default Config;

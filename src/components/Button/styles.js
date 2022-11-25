@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import { ratioHeight,colors,fonts } from "../../theme";
 export const styles = StyleSheet.create({
   buttonStyle: {
-    width:"90%",
+    width:"100%",
     height:40 * ratioHeight,
     backgroundColor:colors.buttonColor,
     borderRadius:10,

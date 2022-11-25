@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     marginBottom: 30,
-    width:"100%",
+    width:"90%",
     alignItems:"center",
   }
 });
