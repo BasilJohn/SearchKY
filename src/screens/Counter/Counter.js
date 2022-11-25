@@ -1,5 +1,5 @@
-import React, {useEffect,useState} from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import {View, Text,SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 //Custom Imports
 import {styles} from './Styles';
@@ -16,7 +16,7 @@ const CounterScreen = props => {
 
 
   return (
-    <View style={globalStyles.containerStyle}>
+    <SafeAreaView style={globalStyles.containerStyle}>
       <View style={styles.containerStyle}>
       <View style={styles.counterTextContainerStyle}>
         <Text style={styles.counterTextStyle}>{props?.count}</Text>
@@ -30,7 +30,7 @@ const CounterScreen = props => {
         </View>
       </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

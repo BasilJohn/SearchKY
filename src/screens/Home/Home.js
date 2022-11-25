@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View} from 'react-native';
+import {View,SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 //Custom Imports
 import {Button} from '../../components';
@@ -14,12 +14,12 @@ const HomeScreen=(props)=>{
   }
 
   return (
-    <View style={globalStyles.containerStyle}>
+    <SafeAreaView style={globalStyles.containerStyle}>
       <View style={styles.bottomContainerStyle}>
         <Button onPress={()=>moveToScreen("Search")} buttonText={'Search'} />
         <Button onPress={()=>moveToScreen("Counter")} buttonText={'Counter'} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 

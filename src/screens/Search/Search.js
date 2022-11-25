@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, ActivityIndicator, Image} from 'react-native';
+import {View, Text, ActivityIndicator, Image,SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 import {AccordionList} from 'accordion-collapse-react-native';
 //Custom Imports
@@ -40,7 +40,7 @@ const SearchScreen = props => {
   };
 
   return (
-    <View style={globalStyles.containerStyle}>
+    <SafeAreaView style={globalStyles.containerStyle}>
       <View style={styles.searchInputContainer}>
         <InputText
           textValue={searchValue}
@@ -61,7 +61,7 @@ const SearchScreen = props => {
         body={renderItemBody}
         keyExtractor={item => `${item.etag}`}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
