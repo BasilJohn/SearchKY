@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     alignSelf:"center",
     borderTopWidth: 1,    
     borderColor:colors.listItemBorderColor,
-    height: 50 * ratioHeight,
+    minHeight: 50 * ratioHeight,
     justifyContent:"center"
   },
   itemBodyStyle:{

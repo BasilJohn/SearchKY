@@ -30,6 +30,13 @@ export default (state = initialState, action) => {
         ...state,
         count: action.data,
       };
+    case ActionTypes.CLEAR_STORE_DATA:
+      return {
+        ...state,
+        count: 0,
+        searchList: [],
+        searchListError: '',
+      };
     default:
       return state;
   }

@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 //Custom Imports
 import {HomeScreen, SearchScreen, CounterScreen} from './src/screens';
 import {store} from './src/store/store';
+import {colors, fonts} from './src/theme';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -13,11 +14,37 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
-            options={{headerShown: false}}
+            options={{headerShown: false, headerShadowVisible: false}}
             component={HomeScreen}
           />
-          <Stack.Screen name="Search" component={SearchScreen} />
-          <Stack.Screen name="Counter" component={CounterScreen} />
+          <Stack.Screen
+            name="Search"
+            options={{
+              headerShadowVisible: false,
+              headerTitleAlign: 'center',
+              headerTitleStyle: {
+                color: colors.textColorPrimary,
+                fontSize: fonts.size.font14,
+              },
+              headerTintColor: colors.textColorPrimary,
+              headerBackTitle: '',
+            }}
+            component={SearchScreen}
+          />
+          <Stack.Screen
+            name="Counter"
+            options={{
+              headerShadowVisible: false,
+              headerTitleAlign: 'center',
+              headerTitleStyle: {
+                color: colors.textColorPrimary,
+                fontSize: fonts.size.font14,
+              },
+              headerTintColor: colors.textColorPrimary,
+              headerBackTitle: '',
+            }}
+            component={CounterScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

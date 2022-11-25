@@ -46,3 +46,10 @@ export const counterAction = value => dispatch => {
       data: value,
     });
 };
+
+export const clearStoreData =()=> dispatch => {
+    dispatch({
+      type: ActionTypes.CLEAR_STORE_DATA,
+      data: "",
+    });
+};
