@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text,SafeAreaView} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 //Custom Imports
 import {styles} from './Styles';
@@ -8,27 +8,35 @@ import {Button} from '../../components';
 import {homeActions} from '../../store/actions';
 
 const CounterScreen = props => {
-
   const onButtonPress = type => {
-    const countValue=type==="increase"?props.count+1:props?.count-1;
+    const countValue = type === 'increase' ? props.count + 1 : props?.count - 1;
     props?.counterAction(countValue);
   };
-
 
   return (
     <SafeAreaView style={globalStyles.containerStyle}>
       <View style={styles.containerStyle}>
-      <View style={styles.counterTextContainerStyle}>
-        <Text style={styles.counterTextStyle}>{props?.count}</Text>
-      </View>
-      <View style={styles.buttonContainer}>
-        <View style={styles.counterButtonContainer}>
-        <Button onPress={() => onButtonPress('increase')} buttonText={'+'} />
+        <View style={styles.counterTextContainerStyle}>
+          <Text testID="countText" style={styles.counterTextStyle}>
+            {props?.count}
+          </Text>
         </View>
-        <View style={styles.counterButtonContainer}>
-        <Button onPress={() => onButtonPress('decrease')} buttonText={'-'} />
+        <View style={styles.buttonContainer}>
+          <View style={styles.counterButtonContainer}>
+            <Button
+              testID="incrementButton"
+              onPress={() => onButtonPress('increase')}
+              buttonText={'+'}
+            />
+          </View>
+          <View style={styles.counterButtonContainer}>
+            <Button
+              testID="decrementButton"
+              onPress={() => onButtonPress('decrease')}
+              buttonText={'-'}
+            />
+          </View>
         </View>
-      </View>
       </View>
     </SafeAreaView>
   );

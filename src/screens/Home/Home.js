@@ -16,8 +16,8 @@ const HomeScreen=(props)=>{
   return (
     <SafeAreaView style={globalStyles.containerStyle}>
       <View style={styles.bottomContainerStyle}>
-        <Button onPress={()=>moveToScreen("Search")} buttonText={'Search'} />
-        <Button onPress={()=>moveToScreen("Counter")} buttonText={'Counter'} />
+        <Button testID={"btnSearch"} onPress={()=>moveToScreen("Search")} buttonText={'Search'} />
+        <Button testID={"btnCounter"} onPress={()=>moveToScreen("Counter")} buttonText={'Counter'} />
       </View>
     </SafeAreaView>
   );
