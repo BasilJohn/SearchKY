@@ -22,5 +22,8 @@ Functionality
 3)Counter is a normal increment/decrement functionality.\
 <br/>
 Used redux for both pages.
+<br/>
 
-
+Unit Tests
+<br/>
+run "npm run test" 
